@@ -1,0 +1,13 @@
+// this program populates the value of degrees in Centigrade, and then displays both the Centigrade and Fahrenheit values.
+/////////////////
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Centigrade and Fahrenheit:");
+   
+    int C = 150;
+    int product = C * 9/5;
+    int sum = product + 32;
+    
+    System.out.println(C + " Centigrade " + "= " + sum + " Fahrenheit ");
+  }
+}
