@@ -1,0 +1,39 @@
+// this program solves a quadratic equation
+
+// inputs any amount we want for variable
+
+
+
+import java.util. Scanner;
+class Main {
+  public static void main(String[] args) {
+
+    double secondRoot = 0, firstRoot = 0;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the value of a ::");
+    double a = sc.nextDouble();
+
+    System.out.println("Enter the value of b ::");
+    double b = sc.nextDouble();
+
+    System.out.println("Enter the value of c ::");
+    double c = sc.nextDouble();
+
+    //finding the determinant
+    double determinant = (b*b)-(4*a*c);
+    double sqrt = Math.sqrt(determinant);
+
+    // if the determinant is greater than 0 roots are [-b +squareroot(determinant)]/2*a and  [-b -squareroot(determinant)]/2*a.
+    // if the determinant is equal to 0 root value would be (-b+sqrt(d))/(2*a)
+
+    if(determinant>0){
+      firstRoot = (-b + sqrt)/(2*a);
+      secondRoot = (-b - sqrt)/(2*a);
+      System.out.println("Roots are: " + firstRoot + " and " + secondRoot);}
+
+    if(determinant == 0){
+    System.out.println("Root is ()"+(-b+sqrt)/(2*a));
+    }
+
+  }
+}
