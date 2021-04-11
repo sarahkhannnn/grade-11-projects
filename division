@@ -1,0 +1,20 @@
+// this code divides the first number by the second number
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+
+    // asking user to input numbers
+    Scanner sin = new Scanner(System.in);
+    System.out.println("Enter First Number ");
+    int firstInt = sin.nextInt();
+    System.out.println("Enter Second Number");
+    int secondInt = sin.nextInt();
+
+    // calculating the answer
+    int answer = firstInt%secondInt;
+
+    // final output 
+    System.out.println("Answer: " + answer);
+  }
+}
