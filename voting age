@@ -1,0 +1,29 @@
+// This program asks the user his/her name). Then asks for his/her age. If the person is older than 18, the program will ask the user to Step right up and vote If the person is younger than that, the computer will say: Maybe next time.
+
+import java.util.*;
+class Main {
+public static void main(String[] args) { String sName;
+// user entering their name
+  Scanner sin = new Scanner(System.in); 
+	System.out.println("Enter your name"); 
+  sName = sin.next(); 
+  
+  // asking the users age
+  int sAge;
+	System.out.println("Enter your age"); 
+  sAge = sin.nextInt(); 
+  
+  // if statements
+  // if user is older than 18 they are eligble to vote
+  // if user is younger than 18 they cannot vote, and thus need to try next time
+   if (sAge > 18) 
+        {    
+            System.out.println("Step right up and vote " + sName);   
+        }
+  
+        else 
+        {    
+            System.out.println("Maybe next time, " +  sName);  
+        } 
+    }
+}
