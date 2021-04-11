@@ -1,0 +1,30 @@
+// This program asks the user to input the marks for 4 of their classes. The program will then display the average of the 4 marks.
+///////////////////////////////
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+    ///declaring variables
+
+    int nMathMark;
+    int nEngMark;
+    int nGeoMark;
+    int nGymMark;
+    int nAverageMark;
+
+     Scanner sin = new Scanner (System.in);
+     System.out.println("Input the marks for 4 of your classes (enter one mark then press the enter key)");
+     nMathMark = sin.nextInt();
+     nEngMark = sin.nextInt();
+     nGeoMark = sin.nextInt();
+     nGymMark = sin.nextInt();
+
+     int addition = nMathMark + nEngMark + nGeoMark + nGymMark;
+     int AverageMark = addition/4;
+     System.out.println("Your average mark is " + AverageMark);
+    
+
+    
+  }
+}
