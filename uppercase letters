@@ -1,0 +1,27 @@
+// this program asks the user to input a letter, and then informs the user if the letter is upper case or not. 
+
+
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+
+//decalring variables
+ String letter;
+
+ Scanner sin = new Scanner(System.in); //user input 
+ System.out.println("Enter the Letter");
+ letter = sin.nextLine();
+
+  int i=0;
+  while( i<letter.length()){
+  char ch = letter.charAt(i);
+
+   if(ch>='A' && ch<='Z'){
+   System.out.println(letter + " is a uppercase letter");
+
+}
+   else if(ch>='a' && ch<='z'){
+   System.out.println(letter + " is a lowercase letter");
+
+}}}}
+
