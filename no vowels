@@ -1,0 +1,21 @@
+// this program  accepts a sentence input from the user, and outputs the sentence without vowels.
+
+import java.util.Scanner;
+class Main {   
+    public static void main(String[] args)
+    {
+      Scanner sin = new Scanner(System.in);
+         
+        System.out.println("Enter the sentence");
+         
+        String inputString = sin.nextLine();
+         
+        String newInputString = inputString.replaceAll("[AEIOUaeiou]", "");
+         
+        System.out.println("The sentence without vowels:");
+         
+        System.out.println(newInputString);
+         
+        sin.close();
+    }
+}
