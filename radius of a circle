@@ -1,0 +1,13 @@
+// This program populates the radius of a circle, and then displays the circumference.
+
+class Main {
+ public static void main(String args[]) {
+ 
+ int radius = 10; //popoulating the radius 
+
+   // calculating the circumference 
+    double circumference= Math.PI * 2*radius;
+      
+      System.out.println( "The circumference of the circle is " + circumference);
+   }
+}
