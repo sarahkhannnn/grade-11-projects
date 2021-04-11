@@ -1,0 +1,23 @@
+// This program finds the average of 4 class' marks. 
+
+
+class Main {
+  public static void main(String[] args) {
+    
+    ///declaring variables
+
+    int nMathMark = 95;
+    int nEngMark = 89;
+    int nGeoMark = 97;
+    int nGymMark = 93;
+    int nAverageMark;
+
+  
+    int addition = nMathMark + nEngMark + nGeoMark + nGymMark;
+    int AverageMark = addition/4;
+    
+    System.out.println("The average mark is " + AverageMark);
+  }}
+
+
+    
