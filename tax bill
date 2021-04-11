@@ -1,0 +1,73 @@
+// this program asks the user for their gross income, and outputs their tax bill 
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+    // declaring variables 
+
+    double dGrossIncome;
+    double dTaxRate;
+    double dTaxBill;
+    double dFinalBill;
+
+    // asking the user to input gross income
+    Scanner sin = new Scanner(System.in);
+    System.out.println("Input your gross income");
+    dGrossIncome = sin.nextDouble();
+
+    // if statements 
+
+     if (dGrossIncome <=10000){
+    
+      dTaxRate = 0;
+      dTaxBill = (dGrossIncome * 0);
+      dFinalBill = dTaxBill/100.0;
+
+      System.out.println("Your tax bill is " + dFinalBill);
+
+    }
+
+    else if (dGrossIncome <=10001 && dGrossIncome <=25000){
+
+      dTaxRate = .20;
+      dTaxBill = (dGrossIncome * dTaxRate);
+      dFinalBill = dTaxBill/100.0;
+
+      System.out.println("Your tax bill is " + dFinalBill);
+
+    } 
+    else if (dGrossIncome <=25001 && dGrossIncome <=50000){
+
+      dTaxRate = .25;
+      dTaxBill = (dGrossIncome * dTaxRate);
+      dFinalBill = dTaxBill/100.0;
+
+      System.out.println("Your tax bill is " + dFinalBill);
+
+    }
+
+    else if (dGrossIncome <=50001 && dGrossIncome <=100000){
+
+      dTaxRate = .30;
+      dTaxBill = (dGrossIncome * dTaxRate);
+      dFinalBill = dTaxBill/100.0;
+
+      System.out.println("Your tax bill is " + dFinalBill);
+
+    }
+
+    else if (dGrossIncome <=100001){
+
+      dTaxRate = .35;
+      dTaxBill = (dGrossIncome * dTaxRate);
+      dFinalBill = dTaxBill/100.0;
+
+
+      System.out.println("Your tax bill is " + dTaxBill);
+
+    }
+  
+  }
+}
+
