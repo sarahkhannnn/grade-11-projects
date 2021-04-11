@@ -1,0 +1,84 @@
+// this program asks the user the four corners of a quadrilateral then calculates whether or not it is a parallelogram
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+
+    //declaring variables
+    double dX1, dX2, dX3, dX4;
+    double dY1, dY2, dY3, dY4;
+    double dXchange1, dYchange1, dXchange2,dYchange2;
+    double dLength1,dLength2,dSlope1,dSlope2;
+    boolean isParallelogram;
+
+    //obtaining user input
+    Scanner sin = new Scanner(System.in);
+    System.out.println("What is the X-value of the top left corner?");
+    dX1 = sin.nextDouble();
+    Scanner sin1 = new Scanner(System.in);
+    System.out.println("What is the Y-value of the top left corner?");
+    dY1 = sin1.nextDouble();
+
+     Scanner sin2 = new Scanner(System.in);
+     System.out.println("What is the X-value of the bottom left corner?");
+     dX2 = sin2.nextDouble();
+
+      Scanner sin3 = new Scanner(System.in);
+      System.out.println("What is the Y-value of the bottom left corner?");
+      dY2 = sin3.nextDouble();
+
+       Scanner sin4 = new Scanner(System.in);
+       System.out.println("What is the X-value of the bottom right corner?");
+       dX3 = sin4.nextDouble();
+
+        Scanner sin5 = new Scanner(System.in);
+        System.out.println("What is the Y-value of the bottom right corner?");
+        dY3 = sin5.nextDouble();
+
+         Scanner sin6 = new Scanner(System.in);
+         System.out.println("What is the X-value of the top right corner?");
+         dX4 = sin6.nextDouble();
+
+          Scanner sin7 = new Scanner(System.in);
+          System.out.println("What is the Y-value of the top right corner?");
+          dY4 = sin7.nextDouble();
+
+    dXchange1 = dX1 - dX4;
+    dYchange1 = dY1 - dY4;
+    dXchange2 = dX2 - dX3;
+    dYchange2 = dY2 - dY3;
+
+    //output
+    dSlope1 = Slope(dXchange1,dYchange1);
+    dSlope2 = Slope(dXchange2,dYchange2);
+    dLength1 = Distance(dXchange1,dYchange1);
+    dLength2 = Distance(dXchange2,dYchange2);
+
+    if (dSlope1 == dSlope2 && dLength1 == dLength2) {
+      isParallelogram = true;
+    }
+    else {
+      isParallelogram = false;
+    }
+
+    if (isParallelogram == true) {
+      System.out.println("\nYour inputed co-ordinates are the corners of a parallelogram!!");
+    }
+    else if (isParallelogram == false) {
+      System.out.println("\nYour input co-ordinates are not the corners of a parallelogram.");
+    }
+  }
+
+  public static double Slope(double dXchange, double dYchange) {
+    double dSlope;
+    dSlope = dYchange/dXchange;
+    return dSlope;
+  }
+  
+  //calculating the distance between the two points
+  public static double Distance(double dXchange, double dYchange) {
+    double dDis;
+    dDis = Math.sqrt(Math.pow(dXchange,2)+Math.pow(dYchange,2)); 
+    return dDis;                                          
+  }
+}
