@@ -1,0 +1,15 @@
+/Description: This program populates two variables, and outputs the sum and product of those two variables.
+///////////////////////////
+class Main {
+  public static void main(String[] args) {
+    
+    int a = 5;
+    int b = 6;
+    int sum = a + b;
+
+    System.out.println("Sum of " + a + " and " + b + " is " + sum);
+
+    int product = a * b;
+    System.out.println(" Product of " +  a  + " and " + b + " is " + product); 
+  }
+}
