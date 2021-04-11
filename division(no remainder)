@@ -1,0 +1,45 @@
+// When you first learned to divide, you expressed answers using a quotient and a remainder. for example, if you divide 7 by 2, your answer would be given as 3 r.1. Given 2 integers, divide the largest number by the smallest number. For example, the user may input 2 then 7. Your program should display the same result. (e) Do the same problem as 1d), but if there is no remainder, do not include “r. 0”.
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+
+  // declaring variables
+
+  int dInput1;  // these should be ints
+  int dInput2;
+  int dQuotient;
+  int dRemainder = 0; // it needs to have an initial condition because what if the program executes and never meets the conditions of your if statements
+    
+    // user input 
+    Scanner sin = new Scanner(System.in);
+    System.out.println("Input the two numbers");
+    dInput1 = sin.nextInt();
+    dInput2 = sin.nextInt();
+
+      // if statements 
+      if (dInput1> dInput2){
+      
+      dQuotient = dInput1/dInput2;
+      dRemainder = dInput1 % dInput2;
+
+      System.out.println("the quotient is " + dQuotient + " and the remainder is " +dRemainder);
+
+      }
+
+      else if (dInput2>dInput1){
+
+      dQuotient = dInput2/dInput1;
+      dRemainder = dInput2 % dInput1;
+      
+      System.out.println("the quotient is " + dQuotient + "the remainder is " + dRemainder);
+      }
+
+      if (dRemainder == 0 ){
+
+        System.out.println("there is no remainder.");
+      }
+
+  }
+
+  }
