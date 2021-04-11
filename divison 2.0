@@ -1,0 +1,14 @@
+// this program populates 2 double variables, and the  displays the double value of the quotient, rounded.
+/////////////////
+
+class Main {
+  public static void main(String[] args) {
+    
+    double integer1 = 5;
+    double integer2 = 2;
+    double quotient =  integer1/integer2;
+
+    System.out.println("Double Value " + "= " +  quotient);
+
+  }
+}
