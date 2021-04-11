@@ -1,0 +1,49 @@
+// This program asks for yyour savings balance, annual interest rate, and the amount of years you plan on saving your money for, and creates a table indicating how much money you will have (or make).
+
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args){
+
+      // declare variables 
+      double dStarting;
+      double dEnding;
+      double dSavings;
+      double dTime;
+      double dInterest;
+      double dAnnualInterestRate;
+      int nI;
+
+      // user input
+
+      Scanner sin = new Scanner(System.in);
+      System.out.println("Enter your savings balance");
+      dSavings = sin.nextDouble();
+
+      System.out.println("Enter the annual interest rate (please do not enter a percentage sign");
+      dAnnualInterestRate = sin.nextDouble();
+
+      System.out.println("Enter the amount of years you plan to put your savings away for");
+      dTime = sin.nextDouble();
+
+      dEnding = dSavings; // staryinh savings column
+      System.out.println("Months" + "\t" + "Starting" + "\t" + "Interest" + "\t" + "Ending");
+
+      // for loop
+      for (nI = 1; nI<= dTime *12; nI++){
+      // months column
+      dStarting = dEnding; // Updates the starting balnace to last years balance (dEnding)
+
+      dInterest = 
+      dStarting * dAnnualInterestRate/12;
+      // interest column
+
+      dEnding = dStarting + dInterest;
+      // ending balance column
+
+      System.out.println(nI + "\t  \t" + String.format("%.2f", dStarting) + "\t  \t" + String.format("%2f", dInterest) + "\t \t" + String.format("%.2f", dEnding));
+      }
+
+
+  }
+}
