@@ -1,0 +1,14 @@
+// this program populates 2 integer variables, and then displays the integer value of the quotient.
+/////////////////
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello there!");
+    
+    int x = 100;
+    int y = 10;
+
+    int quotient = x/y;
+
+    System.out.println(" Integer value " + "= " + quotient );
+  }
+}
