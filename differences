@@ -1,0 +1,20 @@
+// This program asks the user to input 2 numbers, and it outputs the postive difference. 
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+
+    // asking user to input numbers
+    Scanner sin = new Scanner(System.in);
+    System.out.println("Enter Larger Number ");
+    int firstInt = sin.nextInt();
+    System.out.println("Enter Second Number");
+    int secondInt = sin.nextInt();
+
+    // calculating the difference
+    int difference = firstInt - secondInt;
+
+    // final output 
+    System.out.println("The difference betweent the two integers is " + difference);
+  }
+}
