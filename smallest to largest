@@ -1,0 +1,38 @@
+// this program allows the user to input 5 numbers into an array, then gives them the option to display the largest or smallest number that was inputted
+
+import java.util.Scanner;
+class Main {
+public static void main (String args[]){
+
+//declaring variables
+double min;
+double max;
+
+float arr[]=new float[5]; //declaring the size of the array
+
+//input from user
+for(int i=0; i<5; i++){
+
+   Scanner sin = new Scanner(System.in);
+   System.out.print("Enter the element "+(i+1)+": ");
+   arr[i] = sin.nextFloat();//takes input from user for array
+   }
+   min = arr[0]; //assume first element as smallest value
+   max = arr[0]; //assume first element as largest value
+
+   for(int i=0; i<5; i++){
+     if(min>arr[i]){ //loop to find minimum number
+       min = arr[i];
+     }
+     
+     if(max<arr[i]){
+       max = arr[i];  //loop to find maximun number
+     }
+   }
+
+  // output
+   System.out.print("\nThe smallest value is: "+ min);
+   System.out.print("\nThe largest value is: "+ max);
+
+}
+}
