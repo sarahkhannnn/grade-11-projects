@@ -1,0 +1,22 @@
+// This program asks the user to populate the coordinates of two points on a Cartesian plane. It then assesses the slope of the line based on the two points. 
+import java.util.*;
+class Main {
+public static void main(String[] args) { String sCoordinates;
+
+// user entering in coordinates
+Scanner sin = new Scanner(System.in); 
+System.out.print("Enter first coordinates (x1, y1) :");
+    double x1 = sin.nextDouble();
+    double y1 = sin.nextDouble();
+
+// user entering second set of coordinates 
+System.out.print("Enter second coordinates (x2, y2) :");
+    double x2 = sin.nextDouble();
+    double y2 = sin.nextDouble(); 
+
+// calculating the final result 
+double result = Math.sqrt((y2-y1)/(x2-x1));
+
+System.out.println("The slope of the line is " +  result);
+  }
+}
